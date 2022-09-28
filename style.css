@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
 
 
 
@@ -89,7 +88,7 @@ header div
     margin-left: auto;
     margin-right: auto;
     width: 876px;
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
@@ -152,7 +151,7 @@ header div
 
 .discription-text
 {
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
@@ -191,7 +190,7 @@ header div
 .discription-cards-item-number
 {
     margin: 0;
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 64px;
     display: inline-flex;
@@ -199,7 +198,7 @@ header div
 }
 .discription-cards-item-called
 {
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 24px;
     display: inline-flex;
@@ -209,11 +208,9 @@ header div
 
 .discription-cards-item-text
 {
-    font-family: 'Geometria';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 15px;
-    background: linear-gradient(181.02deg, rgba(255, 255, 255, 0.98) 0.88%, rgba(255, 255, 255, 0.859) 53.62%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    background: linear-gradient(181.02deg, rgba(255, 255, 255, 0.98) 0.88%, rgba(255, 255, 255, 0.908) 53.62%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: justify;
@@ -234,7 +231,7 @@ header div
 
 .footer-text-one
 {
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -245,9 +242,9 @@ header div
 
 .footer-text-two
 {
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 100;
     font-size: 24px;
     text-align: right;
     margin-left: auto;
@@ -257,7 +254,7 @@ header div
 
 .footer-text-three
 {
-    font-family: 'Geometria';
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 100;
     font-size: 18px;
