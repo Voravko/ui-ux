@@ -1,0 +1,177 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@400;700;800&display=swap');
+
+body{
+    
+    margin: 0 0 0 0;
+
+}
+
+body::-webkit-scrollbar {
+  width: 0.1em;
+  background: rgba(255, 255, 255, 0);
+}
+body::-webkit-scrollbar-thumb {
+  background: #ff535300;
+  height:30px;
+}
+
+body::-webkit-scrollbar-track-piece
+{
+   display:none;
+}
+.main-theme-black
+{
+    color:white;
+    background-color: black;
+    background: url(/img/reg_dark.png);
+    background-size: cover;
+}
+
+.main-logo-name
+{
+    width: 700px;
+    display: block;
+    margin-left: auto;
+    margin-top: 70px;
+    margin-right: 130px;
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 60px;
+    text-align: right;
+}
+
+
+.main-form-verificat
+{
+    display: block;
+    position: relative;
+    bottom: 100px;
+    width: 450px;
+    margin-left: 130px;
+    
+}
+
+
+
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+    width: 550px;
+    
+    
+    font-family: 'Geometria', sans-serif;
+  padding-top: 70px;
+
+   z-index: 9999;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:20px;
+	color:#fff;	
+    padding-top: 65px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+
+  border-bottom:1px solid rgb(255, 255, 255);  
+  background:transparent;
+  width:100%;
+  
+  padding:8px 0 5px 0;
+  font-size:14px;
+  color:#fff;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:2px solid #6a6a6a;	
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-14px;
+	font-size:14px;
+	
+}
+
+
+.input-container textarea{ 
+  border:0;
+
+  border-bottom:1px solid rgb(255, 255, 255);  
+  background:transparent;
+  width:100%;
+  
+  padding:8px 0 5px 0;
+  font-size:14px;
+  color:#fff;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.input-container textarea:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:2px solid #6a6a6a;	
+}
+
+.input-container textarea:focus ~ label,
+.input-container textarea:valid ~ label{
+	top:-14px;
+	font-size:14px;
+	
+}
+
+
+.verificat-button
+{
+    outline: none;
+    display: block;
+    width: 550px;
+    border-style: 1px solid;
+    border-color: #ffffff82;
+    background-color: transparent;
+    border-top: 1px solid rgba(165, 165, 165, 0.401);
+    height: 63px;
+   position: relative;
+   right: 100px;
+    
+}
+
+.verificat-button-text
+{
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  display: block;
+  margin-bottom: auto;
+  margin-top: auto;
+  font-size: 24px;
+  line-height: 38px;
+  font-weight: 700;
+}
+
+.erorr-message
+{
+    color:rgb(163, 2, 2);
+    
+}
+  .link {
+   
+    text-decoration:none;
+    font-family: 'Montserrat', sans-serif;
+    color:#fff;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+

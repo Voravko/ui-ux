@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Raleway:wght@400;700;800&display=swap');
+
+
+body::-webkit-scrollbar {
+    width: 0.1em;
+    background: rgba(255, 255, 255, 0);
+  }
+  body::-webkit-scrollbar-thumb {
+    background: #ff535300;
+    height:30px;
+  }
+  
+  body::-webkit-scrollbar-track-piece
+  {
+     display:none;
+  }
+
+.d{
+    margin-left: 120px;
+}
+.header
+{
+    display: flex;
+    height: 100px;
+   padding-right: 130px;
+   padding-left: 20px;
+
+    margin-left: auto;
+    margin-right: auto;
+
+
+    margin-top: 25px;
+    justify-content: space-between;
+}
+
+.logo
+{
+    display: block;
+  
+}
+.menu
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+}
+.title
+{
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 150px;
+    font-family: 'Montserrat', sans-serif;
+}
+.navigate
+{
+    font-size: 13px;
+    display: block;
+    margin-left: 120px;
+    margin-top: 20px;
+    color:white;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.line
+{
+    display: block;
+    height: 3px;
+    width: 320px ;
+    color: white;
+}
+
+.conteiner-coures
+{
+    display: flex;
+    width: auto;
+    height: 400px;
+    margin-top: 50px;
+    margin-left: 120px;
+    margin-right: 120px;
+  
+}
+
+.course-img
+{
+   display: inline;
+   
+   
+}
+
+.course-title
+{
+    display: flex;
+    font-weight: 700;
+    font-size: 24px;
+    color:white;
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 20px;
+    
+
+
+}
+.course-title-dis
+{
+    display: block;
+    font-weight: 300;
+    font-size: 18px;
+    color:white;
+    position: relative;
+    bottom: 20px;
+    margin-left: 60px;
+    font-family: 'Montserrat', sans-serif;
+ 
+
+}
+
+.course-discriotion
+{
+    display: inline;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding-left: 40px;
+    
+}
+
+.course-dis-discription
+{
+    display: block;
+    margin-right: 50px;
+    font-weight: 100;
+    font-size: 14px;
+    color:rgb(192, 192, 192);
+    margin-left: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.course-next-line
+{
+    display: block;
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+
+.course-dis-link
+{
+    display: block;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-bottom: 40px;
+    color:#fff;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration-line: underline;
+    font-size: 18px;
+}
+
+.header-line
+{
+    height: 1px;
+    width: auto;
+    display: block;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.conteiner
+{
+    display: flex;
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.text-title
+{
+    font-weight: 300;
+    font-size: 32px;
+    color: white;
+    display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    margin-left: 70px;
+    margin-top: 40px;
+}
+
+.picture-profile
+{
+    display: inline;
+    width: 280px;
+    height: 280px;
+    margin-left: 80px;
+    margin-top: 30px;
+}
+
+.dis-part
+{
+    display: inline;
+    margin-left: 50px;
+    width: 300px;
+    margin-top: 30px;
+
+}
+
+.dis-text
+{
+    display: block;
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: 50px;
+    font-weight: 100;
+    color: rgb(138, 138, 138);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.course-main-picture
+{
+    width: auto;
+    margin-left: 120px;
+    margin-right: 120px;
+    background-image: url(/img/testp.png);
+    background-size:cover;
+    background-attachment: fixed;
+    height: 350px;
+}
+
+.course-next
+{
+    display: block;
+    margin-left: 120px;
+    margin-right: 120px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.course-next img{
+    width: 7%;
+    display: block;
+
+    margin-left: auto;
+}
+
+.link
+{
+    margin-right: 130px;
+}
+.button-child
+{
+    margin-top: 100px;
+}
+
+.input-container1
+{
+	position:relative;
+	margin-bottom:25px;
+    width: 100%;
+    font-family: 'Geometria', sans-serif;
+    padding-top: 70px;
+
+   z-index: 9999;
+}
+.input-container1 label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:20px;
+	color:#fff;	
+    padding-top: 65px;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+	transition: all 0.5s ease-in-out;
+}
+.input-container1 input{ 
+  border:0;
+
+  border-bottom:1px solid rgb(255, 255, 255);  
+  background:transparent;
+  width:100%;
+  
+  padding:8px 0 5px 0;
+  font-size:14px;
+  color:#fff;
+  font-family: 'Montserrat', sans-serif;
+
+}
+.input-container1 input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:2px solid #6a6a6a;	
+}
+
+.input-container1 input:focus ~ label,
+.input-container1 input:valid ~ label{
+	top:-14px;
+	font-size:14px;
+	
+}
+
+.input-mark
+{
+    margin-left: 30px;
+}

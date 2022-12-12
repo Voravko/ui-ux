@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src = "https://onlinejpgtools.com/images/examples-onlinejpgtools/camo-grid.jpg">
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTvfVWwMnFuhOr7-XGi39ipyjsUgZmONrt0jiblMEnqnxWrUlbsnGix7pOzEI2d2kVU5E&usqp=CAU">
+    <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGjWFeOhKHXJtkksGDWl5gi-8FOJsmIAx4va_Lj_lA1EnHwyMIzsX0jV6ej-55_iYqdQM&usqp=CAU">
+
+    <br/>
+
+    <a title="" href="urtghirutg">first</a>
+    <a title="" href="urtghirutg">second</a>
+    <a title="" href="urtghirutg">third</a>
+
+    <br/>
+    <br/>
+
+
+    <input id="inp1" type="text" value="inp1">
+    <input id="inp1" type="text" value="inp2">
+    <input id="inp1" type="text" value="inp3">
+    <p id = "myP">SMTH</p>
+
+    <br/>
+    <br/>
+
+
+    <input id="inp2" type="text" value="inp1">
+    <input id="inp2" type="text" value="inp2">
+    <input id="inp2" type="text" value="inp3">
+
+    <br/>
+    <br/>
+
+<style>
+    p{
+        width: ;
+    }
+</style>
+    <p id = "myP1">1</p>
+    <p id = "myP1">2</p>
+    <p id = "myP1">3</p>
+    <p id = "myP1">4</p>
+
+    <br/>
+
+    <input id="inp3" type="text" value="inp1">
+    <input id="inp3" type="text" value="inp2">
+    <input id="inp3" type="text" value="inp3">
+</body>
+<script>    
+let imgs = document.querySelectorAll('img');
+for (let index = 0; index < imgs.length; index++) {
+    imgs[index].addEventListener('click', function(){ alert(this.src);});
+}
+////////////////////////////////////////////
+let as = document.querySelectorAll('a');
+function task1()
+{
+    this.title = "edwd"; 
+    this.text = this.text + "(" + this.href+ ")" ;
+    this.removeEventListener('mouseenter', task1);
+}
+for (let index = 0; index < as.length; index++) {
+    as[index].addEventListener('mouseenter', task1);  
+}
+/////////////////////////////////////
+let inputs = document.querySelectorAll('#inp1');
+var myText = document.getElementById("myP");
+
+function task2()
+{
+   myText.innerHTML += "\n" + this.value;
+}
+for (let index = 0; index < inputs.length; index++) {
+    inputs[index].addEventListener('focusout', task2, true);  
+}
+/////////////////////////////////////
+
+
+let inputs1 = document.querySelectorAll('#inp2');
+function task3()
+{
+   alert(this.value);
+   this.removeEventListener('click', task3);
+}
+for (let index = 0; index < inputs1.length; index++) {
+    inputs1[index].addEventListener('click', task3);  
+    
+}
+///////////////////////////////////////////////////
+let ps = document.querySelectorAll('#myP1');
+function task4()
+{
+   this.innerHTML *= this.innerHTML;
+}
+for (let index = 0; index < ps.length; index++) {
+    ps[index].addEventListener('click', task4);  
+    
+}
+//////////////////////////////////////////////////////////////////////
+let inputs3 = document.querySelectorAll('#inp3');
+function task5()
+{
+    promt("asd");
+
+}
+for (let index = 0; index < inputs3.length; index++) {
+    inputs3[index].addEventListener('focusout', task4, true); 
+    
+}
+
+// Добавить на страницу три input-a. Привязать ко всем input-ам событие,
+// потери фокуса проверяли свое содержимое на правильное количество
+// символов. Сколько символов должно быть в input, указывается с
+// помощью prompt. Если введено правильное количество, то граница input
+// становится зеленой, если неправильное - красной.
+</script>
+</html>

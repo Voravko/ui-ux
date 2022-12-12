@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300&display=swap');
 
-
-
-
 body::-webkit-scrollbar {
     width: 0.1em;
     background: rgba(255, 255, 255, 0);
@@ -21,14 +18,27 @@ body::-webkit-scrollbar {
   }
 
 
+  .theme-dark
+{
+    background-color: black;
+    color:white;
+}
+
 .main-theme-black
 {
     color:white;
     background-color: black;
 }
+
+.main-theme-white
+{
+    color:rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+}
+
 .header-picture
 {
-    background-image: url(curcles.svg);
+    background-image: url(/img/curcles.svg);
     background-size:cover;
 }
 
@@ -119,7 +129,7 @@ header div
 {
     width: auto;
     height: 700px;
-    background-image: url(12.png);
+    background-image: url(/img/12.png);
     background-attachment: fixed; 
     background-size: cover;
 }
@@ -134,7 +144,7 @@ header div
 .about-project-discription-line
 {
     position: relative;
-    background-image: url(1.png);
+    background-image: url(/img/1.png);
     background-size:cover;
     top: 120px;
     height: 350px;
@@ -152,9 +162,10 @@ header div
 .discription-text
 {
     font-family: 'Montserrat', sans-serif;
+    
     font-style: normal;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 30px;
     width: 1062px;
     background: linear-gradient(181.02deg, rgba(255, 255, 255, 0.98) 0.88%, rgba(255, 255, 255, 0.787) 53.62%);
@@ -167,9 +178,9 @@ header div
 .discription-line
 {
     display: block;
-    width: 777px;
+    width: 800px;
     height: 0px;
-    margin-top: 40px;
+    margin-top: 20px;
     border: 2px solid rgba(255, 112, 163, 0.5);
     box-shadow: 0px 0px 20px #FF166A;
 }
@@ -222,7 +233,7 @@ header div
 {
 
     height: 400px;
-    background-image: url(123.png);
+    background-image: url(/img/123.png);
     background-size: cover;
     padding-left: 100px;
     padding-right: 100px;
@@ -263,4 +274,68 @@ header div
     color: #FFFFFF;
     width: 363px;
     padding-top: 70px;
+    position: relative;
 }
+
+.link {
+   
+    text-decoration: none !important;
+    border: transparent;
+    color: #FFFFFF;
+  }
+
+
+   .link:hover { 
+    text-decoration: underline; /* Добавляем подчеркивание при наведении курсора на ссылку */
+    color: rgb(255, 255, 255);
+   }
+
+
+  .conteiner-child
+  {
+    display: inline-block;
+  }
+
+  .before-course
+  {
+    justify-content: space-between;
+    margin-top: 70px;
+  }
+
+  .button-child
+  {
+    position: relative;
+    bottom: 70px;
+    left: 240px;
+  }
+
+  .main-theme-black_menu
+{
+    color:white;
+    background-color: black;
+    background: url(/img/fm.png);
+    background-size: cover;
+}
+
+.menu-list
+{
+    
+    list-style-type: none;
+    padding-left: 120px;
+    
+}
+
+.menu-list li
+{
+    
+  
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+    padding-top:70px ;
+
+
+    
+}
+
