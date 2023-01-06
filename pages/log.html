@@ -11,20 +11,20 @@
             GLAD TO SEE YOU AGAIN
         </div>
   
-    <div class="main-form-verificat">
+    <form class="main-form-verificat" method="post" action="../functionas/log.php">
         <div class="input-container">
-            <input type="text" required=""/>
+            <input type="text" id = "log" name = "log" required=""/>
             <label>LOGIN</label>
             
         </div>
         <div class="input-container">
-            <input type="text" id = "eme" required=""/>
+            <input type="text" id = "eme" name = "eme" required=""/>
             <label>E-MAIL</label>		
             <span id = "errer_eme" class = "erorr-message"  ></span>	
         </div>
         
         <div class="input-container">
-            <input type="text" id = "ps1" required=""/>
+            <input type="text" id = "ps1" name = "ps1" required=""/>
             <label>PASSWORD</label>		
             <span class = "erorr-message" id = "error_ps" ></span>
         </div>
@@ -34,7 +34,7 @@
         </button>
     </a> 
         
-    </div>
+</form>
  
   <script src = "/script.js"></script>
 </body>

@@ -10,7 +10,16 @@
 
 
   <body class="theme-dark">
-    div class="header">
+  
+    <?php
+    $link = mysqli_connect("localhost", "root", "", "uiux", 3306);
+    mysqli_set_charset($link, "utf8");
+    session_start();
+    $id_token = $_SESSION['id_token'];
+    $query = mysqli_query($link, "SELECT * FROM `designer` WHERE `id` = '$id_token'");
+    $row = mysqli_fetch_assoc($query);
+    ?>
+    <div class="header">
     <div class="logo">
      <a href = "/index.html" class = "link"> <img src="/img/logoui.svg" /></a>
     </div>
@@ -30,15 +39,19 @@
         <div><img class = "picture-profile" src = "/img/cat.jpg"/></div>
         <div class = "dis-part">
         <div class="input-container">
-          <input type="text" id = "eme" value="ELIZABETH" required=""/>
+          <?php
+         echo '<input type="text" id = "eme" value="'.$row['login'].'" required=""/>'
+          ?>
           <label>NAME</label>		
-          <span id = "errer_eme" class = "erorr-message"  ></span>	
+         
       </div>
   
     <div class="input-container">
-        <input type="text" id = "eme" value="voravkoliza4@gmail.com" required=""/>
-        <label>E-MAIL</label>		
-        <span id = "errer_eme" class = "erorr-message"  ></span>	
+    <?php
+      echo '<input type="text" id = "eme" value="'.$row['email'].'" required=""/>'
+      ?>
+        <label>E-MAIL</label>			
+       
     </div>
     </div>
     </div>
