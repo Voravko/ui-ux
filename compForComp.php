@@ -10,6 +10,7 @@
 
 
   <body class="theme-dark">
+    
     <div class="header">
       <div class="logo">
        <a href = "/index.html" class = "link"> <img src="/img/logoui.svg" /></a>
@@ -47,7 +48,7 @@
     <div class = "before-course conteiner">
         <p class = "text-title conteiner-child">ABOUT</p>
         <div class = "button-child">
-        <a href = "/pages/creteCourse.html" class = "link"> <button class = "verificat-button conteiner-child">
+        <a href = "/pages/creteCourse.php" class = "link"> <button class = "verificat-button conteiner-child">
             <p class = "verificat-button-text">CREATE</p>
         </button>
         </a>
@@ -56,6 +57,9 @@
     </div>
 
     <div class="conteiner-coures">
+    <?php 
+    session_start();
+    $_SESSION['id_cur'] = 7?>
         <img class="course-img" src="/img/testp.png" />
   
         <div class = "course-discriotion">
@@ -64,7 +68,25 @@
           <p class = "course-dis-discription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
           <img class = "course-next-line" src = "/img/learned.png"/>
         </div>
+        <a href = "./upCourse.php">update</a>
+
       </div>
+      <button class = "verificat-button" type="submit" onclick="del()">
+            <p class = "verificat-button-text">Удалить</p>
+    </button>
+    <script>
+        function del()
+        {
+            <?php
+              $id_cur = 9;
+              $link = mysqli_connect("localhost","root","","uiux",3306);
+              mysqli_set_charset($link, "utf8");
+              $query1 = mysqli_query($link, "DELETE FROM `course` WHERE `id` = '$id_cur'"); 
+              header("Location:./compForComp.php");
+              ?>
+        }
+
+    </script>
 
     
     <script src="/script.js"></script>

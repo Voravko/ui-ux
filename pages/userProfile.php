@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>Document</title>
-    <link rel="stylesheet" href="course.css" />
-    <link rel = "stylesheet" href="/style.css"/>
+    <link rel="stylesheet" href="course1.css" />
+    <link rel = "stylesheet" href="/style11.css"/>
     <link rel = "stylesheet" href="verif.css"/>
   </head>
 
@@ -16,94 +16,81 @@
     mysqli_set_charset($link, "utf8");
     session_start();
     $id_token = $_SESSION['id_token'];
+    $id_user = $_SESSION['id_user'];
     $query = mysqli_query($link, "SELECT * FROM `designer` WHERE `id` = '$id_token'");
+    $query2 = mysqli_query($link, "SELECT `id_cours`,`mark`, `link` FROM `trans` WHERE `id_dis` = '$id_token'");
+
+
     $row = mysqli_fetch_assoc($query);
     ?>
     <div class="header">
     <div class="logo">
-     <a href = "/index.html" class = "link"> <img src="/img/logoui.svg" /></a>
+    <a href = "/index.html" class = "link"><img src="/img/logoui.svg"/></a>
     </div>
     <div class="title">
-      <p>COURSE</p>
+    <p>Профиль</p>
     </div>
     
     <div class="menu">
-      <a href = "menuD.html"><img src="/img/menu.svg" /></a>
-    </div>
+        <a href = "<?php
+      if($id_user==1) echo "./menuD.html";
+      if($id_user==2) echo "./menuC.html"; ?>"><img src="/img/menu.svg" /></a>
+      </div>
   </div>
   
     <div class = "header-line"></div>
 
-    <div class = "conteiner">
-        <p class = "text-title">ABOUT</p>
-        <div><img class = "picture-profile" src = "/img/cat.jpg"/></div>
+    <form class = "conteiner" action="../functionas/change.php" method="post">
+    
         <div class = "dis-part">
         <div class="input-container">
           <?php
-         echo '<input type="text" id = "eme" value="'.$row['login'].'" required=""/>'
+         echo '<input type="text" name = "nm" id = "eme" value="'.$row['login'].'" required=""/>';
           ?>
-          <label>NAME</label>		
+          <label>Имя</label>		
          
       </div>
   
     <div class="input-container">
     <?php
-      echo '<input type="text" id = "eme" value="'.$row['email'].'" required=""/>'
+      echo '<input type="text" name = "em" id = "eme" value="'.$row['spec'].'" required=""/>';
       ?>
-        <label>E-MAIL</label>			
+        <label>Специальность</label>			
        
     </div>
+
+    <div class="input-container">
+    <?php
+      echo '<input type="text" name = "em" id = "eme" value="'.$row['dis'].'" required=""/>';
+      ?>
+        <label>Описание</label>			
+       
     </div>
+</br>
+    <button class = "main-func-button">сохранить</button>
+
     </div>
+</form>
    
     <div class = "before-course conteiner">
-        <p class = "text-title conteiner-child">ABOUT</p>
-        <div class = "button-child">
-       
-        </div>
-        
+        <p class = "text-title conteiner-child">Пройденные курсы</p>
+        <div class = "button-child"></div>      
     </div>
-
-    <div class="conteiner-coures">
-        <img class="course-img" src="/img/testp.png" />
-  
-        <div class = "course-discriotion">
-          <p class="course-title">ABSTRACT COURSE</p>
-          <p class="course-title-dis">SIFOFTIT company</p>
-          <p class = "course-dis-discription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <a href = "/https://www.figma.com/file/BfbrzeE7b715gFKnfZMous/Untitled?node-id=323%3A2"><p class = "course-dis-link">Ссылка на тестовое задание</p></a>
-          <span class="course-title">100<span>/<span>100</span>
-        
+    <?php while( $row2 = mysqli_fetch_assoc($query2)): ?>  
+      <?php $idC = $row2['id_cours'];?>   
+        <?php $query1 = mysqli_query($link, "SELECT `name`, `creator_id`, `photo`, `dis`, `test_dis` FROM `course` where `id` = '$idC'");?> 
+          <?php while( $row3 = mysqli_fetch_assoc($query1)): ?>   
+          <div class="conteiner-coures">
+          <img class="course-img" src="../img/<?php echo $row3['photo']; ?>" />
+          <div class = "course-discriotion">
+          <p class="course-title"><?php echo $row3['name'] ?></p>
+          <p class = "course-dis-discription"><?php echo $row3['dis'] ?></p>
+          <a href = "<?php echo $row2['link'] ?>"><p class = "course-dis-link">Ссылка на тестовое задание</p></a>
+          <span class="course-title"><?php echo $row2['mark'] ?><span>/<span>100</span>
         </div>
       </div>
-
-      <div class="conteiner-coures">
-        <img class="course-img" src="/img/testp.png" />
-  
-        <div class = "course-discriotion">
-          <p class="course-title">ABSTRACT COURSE</p>
-          <p class="course-title-dis">SIFOFTIT company</p>
-          <p class = "course-dis-discription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <a href = "/https://www.figma.com/file/BfbrzeE7b715gFKnfZMous/Untitled?node-id=323%3A2"><p class = "course-dis-link">Ссылка на тестовое задание</p></a>
-          <span class="course-title">0<span>/<span>100</span>
-        
-        </div>
-      </div>
-
-      <div class="conteiner-coures">
-        <img class="course-img" src="/img/testp.png" />
-  
-        <div class = "course-discriotion">
-          <p class="course-title">ABSTRACT COURSE</p>
-          <p class="course-title-dis">SIFOFTIT company</p>
-          <p class = "course-dis-discription">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-          <a href = "/https://www.figma.com/file/BfbrzeE7b715gFKnfZMous/Untitled?node-id=323%3A2"><p class = "course-dis-link">Ссылка на тестовое задание</p></a>
-          <span class="course-title">-<span>/<span>100</span>
-        
-        </div>
-      </div>
-
-    
+    <?php endwhile; ?>
+<?php endwhile; ?>
     <script src="/script.js"></script>
   </body>
 </html>

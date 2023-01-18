@@ -224,7 +224,7 @@ header div
     background: linear-gradient(181.02deg, rgba(255, 255, 255, 0.98) 0.88%, rgba(255, 255, 255, 0.908) 53.62%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-align: justify;
+    text-align: left;
     color: #FFFFFF;
     margin: 0;
 }
@@ -339,3 +339,80 @@ header div
     
 }
 
+.c-conteiner
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 1000px;
+    height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 50px;
+}
+
+.choice-conteiner
+{
+    display: flex;
+    border-radius: 20px;
+    height: 100%;
+    width: 40%;
+    box-shadow: 0px 0px 10px rgba(140, 0, 59, 0.19);
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice-conteiner:hover{
+    box-shadow: 0px 0px 10px rgba(140, 0, 58, 0.569);
+
+}
+.choice-conteiner-dis
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.main-func-button
+{
+    display: flex;
+    position: relative;
+    padding: 10px 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 16px; 
+    border-radius: 20px;
+    outline: none;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: transparent;
+    color: aliceblue;
+    box-shadow: none;
+    cursor: pointer;
+}
+.bt-course
+{
+    margin-top: 50px;
+    margin-left: 25px;
+}
+.bt-del
+{
+    position: relative;
+    bottom: 150px ;
+    left: 690px;
+}
+.t_o
+{
+    display: flex;
+    margin-left: auto;
+    margin-right: 120px;
+    
+}
+.o{
+    position: relative;
+    top:40px;
+    margin-top: 30px;
+}

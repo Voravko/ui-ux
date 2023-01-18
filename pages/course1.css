@@ -88,7 +88,7 @@ body::-webkit-scrollbar {
 .course-img
 {
    display: inline;
-   
+   width: 40%;
    
 }
 
@@ -115,8 +115,6 @@ body::-webkit-scrollbar {
     bottom: 20px;
     margin-left: 60px;
     font-family: 'Montserrat', sans-serif;
- 
-
 }
 
 .course-discriotion
@@ -124,6 +122,7 @@ body::-webkit-scrollbar {
     display: inline;
     border-bottom: 1px solid white;
     border-top: 1px solid white;
+    width: 100%;
     padding-left: 40px;
     
 }
@@ -201,7 +200,6 @@ body::-webkit-scrollbar {
     display: inline;
     margin-left: 50px;
     width: 300px;
-    margin-top: 30px;
 }
 
 .dis-text
@@ -220,7 +218,6 @@ body::-webkit-scrollbar {
     width: auto;
     margin-left: 120px;
     margin-right: 120px;
-    background-image: url(/img/testp.png);
     background-size:cover;
     background-attachment: fixed;
     height: 350px;

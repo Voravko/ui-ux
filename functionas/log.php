@@ -11,9 +11,22 @@ $pas = $_POST["ps1"];
 
 
 $query = mysqli_query($link, "SELECT `id` FROM `designer` WHERE `login` = '$log' and `pass` = '$pas' and `email` = '$email'");
-$row = mysqli_fetch_assoc($query);
-session_start(); 
-if($query) { $_SESSION['id_token'] = $row['id']; header("Location: ../pages/userProfile.php"); }
+$query1 = mysqli_query($link, "SELECT `id` FROM `company` WHERE `name` = '$log' and `pass` = '$pas' and `email` = '$email'");
 
-if($row['id'] == ''){ header("Location: ../pages/log.html");};
+session_start();
+
+if($query) { 
+$row = mysqli_fetch_assoc($query);
+$_SESSION['id_token'] = $row['id'];   $_SESSION['id_user'] = 1; header("Location: ../pages/userProfile.php"); }
+
+if($row['id'] == ''){
+    
+$row1 = mysqli_fetch_assoc($query1);
+
+if($query) { $_SESSION['id_token'] = $row1['id'];   $_SESSION['id_user'] = 2; header("Location: ../pages/profileC.php"); }   
+if($row1['id'] == '')
+{
+    header("Location: ../pages/log.html");};
+}
+
 ?>

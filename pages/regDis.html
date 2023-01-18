@@ -3,34 +3,42 @@
 <head>
     <link href="style.css" rel = "stylesheet" />
     <link href = "verif.css" rel = "stylesheet"/>
+    <meta charset="UTF-8" />
+
     <title>Document</title>
 </head>
 <body class = "main-theme-black">
-    <form class = "block" method="post" action="../functionas/reg_dis.php">
+    <form class = "block" method="post" action="../functionas/reg_com.php">
     
         <div class ="main-logo-name">
             TELL US ABOUT YOURSELF
         </div>
   
     <div class="main-form-verificat">
+        
         <div class="input-container">
-            <input type="file" id="file" name="file" accept="image/jpeg" multiple/>
-            <label>PHOTO</label>
-            
-        </div>
-        <div class="input-container">
-            <input type="text" id = "eme" required=""/>
-            <label>SPECIAL</label>		
+            <input type="text" name = "nm" required=""/>
+            <label>Название</label>		
             <span id = "errer_eme" class = "erorr-message"  ></span>	
         </div>
         
         <div class="input-container">
-            <textarea type="text" id = "ps1" required=""></textarea>
-            <label>DISCRIPTION</label>		
+            <input type="email" name = "em" required=""/>
+            <label>Почта</label>		
             
         </div>
-        <a href = "./menuD.html" class = "link" > <button class = "verificat-button">
-            <p class = "verificat-button-text">NEXT</p>
+        <div class="input-container">
+            <input type="text" name = "pasp" required=""/>
+            <label>УНП</label>		
+            
+        </div>
+        <div class="input-container">
+            <input type="text" name = "ps" required=""/>
+            <label>Пароль</label>		
+            
+        </div>
+        <a class = "link" > <button class = "verificat-button">
+            <p class = "verificat-button-text">Далее</p>
         </button>
     </a>
        
